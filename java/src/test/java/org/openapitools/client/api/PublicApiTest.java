@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * API tests for PublicApi
  */
-@Ignore
+//@Ignore
 public class PublicApiTest {
 
     private final PublicApi api = new PublicApi();
@@ -40,7 +40,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicAuthGetTest() throws ApiException {
         String grantType = null;
         String username = null;
@@ -66,7 +66,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetAnnouncementsGetTest() throws ApiException {
         Object response = api.publicGetAnnouncementsGet();
 
@@ -81,7 +81,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetBookSummaryByCurrencyGetTest() throws ApiException {
         String currency = null;
         String kind = null;
@@ -98,7 +98,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetBookSummaryByInstrumentGetTest() throws ApiException {
         String instrumentName = null;
         Object response = api.publicGetBookSummaryByInstrumentGet(instrumentName);
@@ -114,10 +114,10 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetContractSizeGetTest() throws ApiException {
         String instrumentName = null;
-        Object response = api.publicGetContractSizeGet(instrumentName);
+        Object respersonse = api.publicGetContractSizeGet(instrumentName);
 
         // TODO: test validations
     }
@@ -130,7 +130,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetCurrenciesGetTest() throws ApiException {
         Object response = api.publicGetCurrenciesGet();
 
@@ -145,7 +145,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetFundingChartDataGetTest() throws ApiException {
         String instrumentName = null;
         String length = null;
@@ -162,7 +162,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetHistoricalVolatilityGetTest() throws ApiException {
         String currency = null;
         Object response = api.publicGetHistoricalVolatilityGet(currency);
@@ -178,7 +178,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetIndexGetTest() throws ApiException {
         String currency = null;
         Object response = api.publicGetIndexGet(currency);
@@ -194,7 +194,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetInstrumentsGetTest() throws ApiException {
         String currency = null;
         String kind = null;
@@ -212,7 +212,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastSettlementsByCurrencyGetTest() throws ApiException {
         String currency = null;
         String type = null;
@@ -232,7 +232,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastSettlementsByInstrumentGetTest() throws ApiException {
         String instrumentName = null;
         String type = null;
@@ -252,7 +252,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastTradesByCurrencyAndTimeGetTest() throws ApiException {
         String currency = null;
         Integer startTimestamp = null;
@@ -274,7 +274,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastTradesByCurrencyGetTest() throws ApiException {
         String currency = null;
         String kind = null;
@@ -296,7 +296,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastTradesByInstrumentAndTimeGetTest() throws ApiException {
         String instrumentName = null;
         Integer startTimestamp = null;
@@ -317,7 +317,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetLastTradesByInstrumentGetTest() throws ApiException {
         String instrumentName = null;
         Integer startSeq = null;
@@ -338,7 +338,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetOrderBookGetTest() throws ApiException {
         String instrumentName = null;
         BigDecimal depth = null;
@@ -355,7 +355,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetTimeGetTest() throws ApiException {
         Object response = api.publicGetTimeGet();
 
@@ -370,7 +370,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetTradeVolumesGetTest() throws ApiException {
         Object response = api.publicGetTradeVolumesGet();
 
@@ -385,7 +385,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicGetTradingviewChartDataGetTest() throws ApiException {
         String instrumentName = null;
         Integer startTimestamp = null;
@@ -403,7 +403,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicTestGetTest() throws ApiException {
         String expectedResult = null;
         Object response = api.publicTestGet(expectedResult);
@@ -421,9 +421,12 @@ public class PublicApiTest {
      */
     @Test
     public void publicTickerGetTest() throws ApiException {
-        String instrumentName = null;
+        String instrumentName = "BTC-27AUG20-10625-C";
         Object response = api.publicTickerGet(instrumentName);
-
+        System.out.println("test executed");
+        System.out.println(response);
+        Object response2 = api.publicGetInstrumentsGet("BTC", "option", false);
+        System.out.println(response2);
         // TODO: test validations
     }
     
@@ -435,7 +438,7 @@ public class PublicApiTest {
      * @throws ApiException
      *          if the Api call fails
      */
-    @Test
+    //@Test
     public void publicValidateFieldGetTest() throws ApiException {
         String field = null;
         String value = null;
